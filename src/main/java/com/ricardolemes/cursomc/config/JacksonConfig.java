@@ -1,12 +1,14 @@
 package com.ricardolemes.cursomc.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ricardolemes.cursomc.domain.PagamentoComBoleto;
 import com.ricardolemes.cursomc.domain.PagamentocomCartao;
 
+@Configuration
 public class JacksonConfig {
 
 	@Bean

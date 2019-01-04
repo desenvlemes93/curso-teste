@@ -17,7 +17,7 @@ import com.ricardolemes.cursomc.domain.enums.EstadoPagamento;
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED)
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "@type")
-public abstract class Pagamento 	implements Serializable {	
+public abstract class Pagamento implements Serializable {	
 		private static final long serialVersionUID = 1L;
 		
 		
@@ -31,8 +31,9 @@ public abstract class Pagamento 	implements Serializable {
 	@MapsId
 	private Pedido pedido;
 	
+	
 	public Pagamento() {
-		
+	
 	}
 
 
@@ -51,7 +52,6 @@ public abstract class Pagamento 	implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
 
 	public EstadoPagamento getEstado() {
 		return EstadoPagamento.toEnum(estado);
